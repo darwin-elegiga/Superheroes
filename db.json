@@ -1,0 +1,69 @@
+{
+  "heroes":[
+    {
+        "superhero":"Spider Man",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Peter Parker",
+        "first_appearance":"Amazing Fantasy #15",
+        "characters":"Peter Parker",
+        "imagen":"./src/assets/spiderman.jpg"
+    },
+    {
+        "superhero":"Captain America",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Steve Rogers",
+        "first_appearance":"Captain America Comics #1",
+        "characters":"Steve Rogers",
+        "imagen":"./src/assets/capi.jpg"
+    },
+    {
+        "superhero":"Iron Man",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Tony Stark",
+        "first_appearance":"Tales of Suspense #39",
+        "characters":"Tony Stark",
+        "imagen":"./src/assets/ironman.jpg"
+    },
+    {
+        "superhero":"Thor",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Thor Odinson",
+        "first_appearance":"Journey into Myster #83",
+        "characters":"Thor Odinson",
+        "imagen":"./src/assets/thor.jpg"
+    },
+    {
+        "superhero":"Hulk",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Bruce Banner",
+        "first_appearance":"The Incredible Hulk #1",
+        "characters":"Bruce Banner",
+        "imagen":"./src/assets/hulk.jpg"
+    },
+    {
+        "superhero":"Hawkeye",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Clinton Francis Barton",
+        "first_appearance":"Tales of Suspense #57",
+        "characters":"Clinton Francis Barton",
+        "imagen":"./src/assets/hawkeye.jpg"
+    },
+
+    {
+        "superhero":"Wanda",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Norrin Radd",
+        "first_appearance":"The Fantastic Four #48",
+        "characters":"Norrin Radd",
+        "imagen":"./src/assets/wanda.webp"
+    },
+    {
+        "superhero":"Viuda",
+        "publisher":"Marvel Comics",
+        "alter_ego":"Norrin Radd",
+        "first_appearance":"The Fantastic Four #48",
+        "characters":"Norrin Radd",
+        "imagen":"./src/assets/viuda.webp"
+    }
+]
+}

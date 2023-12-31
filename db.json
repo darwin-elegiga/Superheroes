@@ -6,7 +6,7 @@
         "alter_ego":"Peter Parker",
         "first_appearance":"Amazing Fantasy #15",
         "characters":"Peter Parker",
-        "imagen":"./src/assets/spiderman.jpg"
+        "imagen":"./assets/viuda.webp"
     },
     {
         "superhero":"Captain America",
@@ -14,7 +14,7 @@
         "alter_ego":"Steve Rogers",
         "first_appearance":"Captain America Comics #1",
         "characters":"Steve Rogers",
-        "imagen":"./src/assets/capi.jpg"
+        "imagen":"./assets/viuda.webp"
     },
     {
         "superhero":"Iron Man",
@@ -22,7 +22,7 @@
         "alter_ego":"Tony Stark",
         "first_appearance":"Tales of Suspense #39",
         "characters":"Tony Stark",
-        "imagen":"./src/assets/ironman.jpg"
+        "imagen":"./assets/viuda.webp"
     },
     {
         "superhero":"Thor",
@@ -30,7 +30,7 @@
         "alter_ego":"Thor Odinson",
         "first_appearance":"Journey into Myster #83",
         "characters":"Thor Odinson",
-        "imagen":"./src/assets/thor.jpg"
+        "imagen":"./assets/viuda.webp"
     },
     {
         "superhero":"Hulk",
@@ -38,7 +38,7 @@
         "alter_ego":"Bruce Banner",
         "first_appearance":"The Incredible Hulk #1",
         "characters":"Bruce Banner",
-        "imagen":"./src/assets/hulk.jpg"
+        "imagen":"./assets/viuda.webp"
     },
     {
         "superhero":"Hawkeye",
@@ -46,7 +46,7 @@
         "alter_ego":"Clinton Francis Barton",
         "first_appearance":"Tales of Suspense #57",
         "characters":"Clinton Francis Barton",
-        "imagen":"./src/assets/hawkeye.jpg"
+        "imagen":"./assets/viuda.webp"
     },
 
     {
@@ -55,7 +55,7 @@
         "alter_ego":"Norrin Radd",
         "first_appearance":"The Fantastic Four #48",
         "characters":"Norrin Radd",
-        "imagen":"./src/assets/wanda.webp"
+        "imagen":"./assets/viuda.webp"
     },
     {
         "superhero":"Viuda",
@@ -63,7 +63,7 @@
         "alter_ego":"Norrin Radd",
         "first_appearance":"The Fantastic Four #48",
         "characters":"Norrin Radd",
-        "imagen":"./src/assets/viuda.webp"
+        "imagen":"./assets/viuda.webp"
     }
 ]
 }

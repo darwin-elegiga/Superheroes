@@ -41,6 +41,21 @@ export class HeroesSerService{
     this.http.delete(x).subscribe(data=>{this.peticion=data});
     this.arrayheroe.splice(position,1)
   }
+  putHeroe(id:string,heroe:Heroe):void{
+    var x:string="http://localhost:3000/heroes/"+id;
+    this.http.put(x,
+    {
+    "id":"",
+     "superhero":heroe.superhero,
+     "publisher":heroe.publisher,
+     "alter_ego":heroe.alter_ego,
+     "first_appearance":heroe.first_appearance,
+     "characters":heroe.characters,
+     "imagen":heroe.imagen,
+
+    }
+    ).subscribe(data=>{this.peticion=data;});}
+
   heroeone:Heroe=new Heroe();
 
 

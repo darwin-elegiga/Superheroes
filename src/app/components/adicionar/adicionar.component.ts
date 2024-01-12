@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HeroesSerService } from '../../services/heroes-ser.service';
 import { Heroe } from '../../modules/Heroes.model';
@@ -8,24 +8,48 @@ import { Heroe } from '../../modules/Heroes.model';
 @Component({
   selector: 'app-adicionar',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule, ReactiveFormsModule],
   templateUrl: './adicionar.component.html',
   styleUrl: './adicionar.component.css'
 })
 export class AdicionarComponent {
-  superhero:string=''
-  publisher:string=''
-  alter_ego:string=''
-  first_appearance:string=''
-  characters:string=''
-  imagen:string=''
+  addHeroe=new FormGroup({
+    'superhero':new FormControl('',Validators.required),
+    'publisher':new FormControl(''),
+    'alter_ego':new FormControl(''),
+    'first_appearance':new FormControl(''),
+    'characters':new FormControl(''),
+    'imagen':new FormControl(''),
+
+
+  });
+  get superhero(){
+    return this.addHeroe.get("superhero") as FormControl
+  }
+  get publisher(){
+    return this.addHeroe.get("publisher") as FormControl
+  }
+  get alter_ego(){
+    return this.addHeroe.get("alter_ego") as FormControl
+  }
+  get first_appearance(){
+    return this.addHeroe.get("first_appearance") as FormControl
+  }
+  get characters(){
+    return this.addHeroe.get("characters") as FormControl
+  }
+  get imagen(){
+    return this.addHeroe.get("imagen") as FormControl
+  }
+
 
 
   constructor(  private sanitizer:DomSanitizer, private servicio:HeroesSerService){
   }
 
   publicar(){
-    var nuevoheroe:Heroe=new Heroe("",this.superhero,this.publisher,this.alter_ego,this.first_appearance,this.characters,this.ima);
+    var nuevoheroe:Heroe=new Heroe("",this.superhero.value,this.publisher.value,this.alter_ego.value,this.first_appearance.value,this.characters.value,this.ima);
+
     this.servicio.postHeroe(nuevoheroe);
     this.servicio.home();
   }

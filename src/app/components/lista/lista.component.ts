@@ -4,17 +4,20 @@ import { Heroe } from '../../modules/Heroes.model';
 import { HeroesSerService } from '../../services/heroes-ser.service';
 import { Observable } from 'rxjs';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { FindPipe } from '../pipes/find.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-lista',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterOutlet],
+  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule],
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })
 export class ListaComponent implements OnInit {
   listado:Heroe[]=[];
   modificar:string="modificar"
+  nombre:string=''
 
   get(){
     var obs$;

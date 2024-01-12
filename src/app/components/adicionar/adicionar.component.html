@@ -1,7 +1,13 @@
-<input type="text" placeholder="superhero" [(ngModel)]="superhero">
-<input type="text" placeholder="publisher" [(ngModel)]="publisher">
-<input type="text" placeholder="alter_ego" [(ngModel)]="alter_ego">
-<input type="text" placeholder="first_appearance" [(ngModel)]="first_appearance">
-<input type="text" placeholder="characters" [(ngModel)]="characters">
-<input type="file" (change)="subir($event)">
-<button (click)="publicar()">subir</button>
+<form [formGroup]="addHeroe">
+    <input type="text" placeholder="superhero" formControlName="superhero">
+    <div class="alert alert-danger" [hidden]="addHeroe.get('superhero')?.valid||addHeroe.get('superhero')?.pristine">
+      <span> El campo es obligatorio </span>
+    </div>
+    <input type="text" placeholder="publisher" formControlName="publisher">
+    <input type="text" placeholder="alter_ego" formControlName="alter_ego">
+    <input type="text" placeholder="first_appearance" formControlName="first_appearance">
+    <input type="text" placeholder="characters" formControlName="characters">
+    <input type="file" (change)="subir($event)">
+    <button [disabled]="addHeroe.invalid" class="btn btn-primary" (click)="publicar()">subir</button>
+
+</form>

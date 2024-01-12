@@ -1,5 +1,9 @@
-<p *ngFor="let item of listado,let indice=index">
+<input type="text" placeholder="nombre" [(ngModel)]="nombre">
+<p *ngFor="let item of listado|find:nombre,let indice=index">
 <a [routerLink]="['../modificar',indice]"> {{item.superhero}} <img class="img" [src]="item.imagen" alt=""></a>
 </p>
-<span class="loader"></span>
-<a routerLink="../modificar">ojo</a>
+
+
+
+<!-- <span class="loader"></span> -->
+

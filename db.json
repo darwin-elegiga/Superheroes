@@ -1,69 +1,76 @@
 {
-  "heroes":[
+  "heroes": [
     {
-        "superhero":"Spider Man",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Peter Parker",
-        "first_appearance":"Amazing Fantasy #15",
-        "characters":"Peter Parker",
-        "imagen":"./assets/viuda.webp"
+      "id": "1",
+      "superhero": "Spider Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Peter Parker",
+      "first_appearance": "Amazing Fantasy #15",
+      "characters": "Peter Parker",
+      "imagen": "./assets/spiderman.jpg"
     },
     {
-        "superhero":"Captain America",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Steve Rogers",
-        "first_appearance":"Captain America Comics #1",
-        "characters":"Steve Rogers",
-        "imagen":"./assets/viuda.webp"
+      "id": "2",
+      "superhero": "Captain America",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Steve Rogers",
+      "first_appearance": "Captain America Comics #1",
+      "characters": "Steve Rogers",
+      "imagen": "./assets/capi.jpg"
     },
     {
-        "superhero":"Iron Man",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Tony Stark",
-        "first_appearance":"Tales of Suspense #39",
-        "characters":"Tony Stark",
-        "imagen":"./assets/viuda.webp"
+      "id": "3",
+      "superhero": "Iron Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Tony Stark",
+      "first_appearance": "Tales of Suspense #39",
+      "characters": "Tony Stark",
+      "imagen": "./assets/ironman.jpg"
     },
     {
-        "superhero":"Thor",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Thor Odinson",
-        "first_appearance":"Journey into Myster #83",
-        "characters":"Thor Odinson",
-        "imagen":"./assets/viuda.webp"
+      "id": "4",
+      "superhero": "Thor",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Thor Odinson",
+      "first_appearance": "Journey into Myster #83",
+      "characters": "Thor Odinson",
+      "imagen": "./assets/thor.jpg"
     },
     {
-        "superhero":"Hulk",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Bruce Banner",
-        "first_appearance":"The Incredible Hulk #1",
-        "characters":"Bruce Banner",
-        "imagen":"./assets/viuda.webp"
+      "id": "5",
+      "superhero": "Hulk",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Bruce Banner",
+      "first_appearance": "The Incredible Hulk #1",
+      "characters": "Bruce Banner",
+      "imagen": "./assets/hulk.jpg"
     },
     {
-        "superhero":"Hawkeye",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Clinton Francis Barton",
-        "first_appearance":"Tales of Suspense #57",
-        "characters":"Clinton Francis Barton",
-        "imagen":"./assets/viuda.webp"
-    },
-
-    {
-        "superhero":"Wanda",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Norrin Radd",
-        "first_appearance":"The Fantastic Four #48",
-        "characters":"Norrin Radd",
-        "imagen":"./assets/viuda.webp"
+      "id": "6",
+      "superhero": "Hawkeye",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Clinton Francis Barton",
+      "first_appearance": "Tales of Suspense #57",
+      "characters": "Clinton Francis Barton",
+      "imagen": "./assets/hawkeye.jpg"
     },
     {
-        "superhero":"Viuda",
-        "publisher":"Marvel Comics",
-        "alter_ego":"Norrin Radd",
-        "first_appearance":"The Fantastic Four #48",
-        "characters":"Norrin Radd",
-        "imagen":"./assets/viuda.webp"
+      "id": "7",
+      "superhero": "Wanda",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Norrin Radd",
+      "first_appearance": "The Fantastic Four #48",
+      "characters": "Norrin Radd",
+      "imagen": "./assets/wanda.webp"
+    },
+    {
+      "id": "8",
+      "superhero": "Viuda",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Norrin Radd",
+      "first_appearance": "The Fantastic Four #48",
+      "characters": "Norrin Radd",
+      "imagen": "./assets/viuda.webp"
     }
-]
+  ]
 }

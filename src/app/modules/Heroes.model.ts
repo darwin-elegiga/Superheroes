@@ -1,4 +1,5 @@
-export class Heroes{
+export class Heroe{
+  id:string;
   superhero:string;
   publisher:string;
   alter_ego:string;
@@ -6,7 +7,8 @@ export class Heroes{
   characters:string;
   imagen:string;
 
-  constructor(superhero:string="",publisher:string="",alter_ego:string="",first_appearance:string="",characters:string="",imagen:string="",){
+  constructor(id:string="",superhero:string="",publisher:string="",alter_ego:string="",first_appearance:string="",characters:string="",imagen:string="",){
+    this.id=id;
     this.superhero=superhero;
     this.publisher=publisher;
     this.alter_ego=alter_ego;

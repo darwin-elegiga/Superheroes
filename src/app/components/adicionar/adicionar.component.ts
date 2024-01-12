@@ -1,22 +1,34 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
-import { blob } from 'stream/consumers';
-import { error } from 'console';
+import { HeroesSerService } from '../../services/heroes-ser.service';
+import { Heroe } from '../../modules/Heroes.model';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-adicionar',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [CommonModule,FormsModule],
+  templateUrl: './adicionar.component.html',
+  styleUrl: './adicionar.component.css'
 })
-export class HomeComponent {
-  constructor(  private sanitizer:DomSanitizer){
+export class AdicionarComponent {
+  superhero:string=''
+  publisher:string=''
+  alter_ego:string=''
+  first_appearance:string=''
+  characters:string=''
+  imagen:string=''
+
+
+  constructor(  private sanitizer:DomSanitizer, private servicio:HeroesSerService){
   }
 
-
-
+  publicar(){
+    var nuevoheroe:Heroe=new Heroe("",this.superhero,this.publisher,this.alter_ego,this.first_appearance,this.characters,this.ima);
+    this.servicio.postHeroe(nuevoheroe);
+    this.servicio.home();
+  }
   ima:string="";
   subir(event:any):any{
   // console.log(event.target.files);
@@ -24,7 +36,7 @@ export class HomeComponent {
   this.extraer(archivocapturado).then((image:any) =>{
     this.ima=image.base
     console.log(image)
-    alert(this.ima)
+
   });
 
 }

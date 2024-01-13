@@ -4,6 +4,9 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { DomSanitizer } from '@angular/platform-browser';
 import { HeroesSerService } from '../../services/heroes-ser.service';
 import { Heroe } from '../../modules/Heroes.model';
+import Swal from 'sweetalert2';
+
+
 
 @Component({
   selector: 'app-adicionar',
@@ -50,9 +53,43 @@ export class AdicionarComponent {
   publicar(){
     var nuevoheroe:Heroe=new Heroe("",this.superhero.value,this.publisher.value,this.alter_ego.value,this.first_appearance.value,this.characters.value,this.ima);
 
-    this.servicio.postHeroe(nuevoheroe);
+    Swal.fire({
+      title: 'Esta seguro que desea agregar el heroe?',
+      showDenyButton: true,
+      showCancelButton: true,
+      showCloseButton:true,
+      confirmButtonText: 'SÍ',
+      denyButtonText: `NO`,
+
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Agregado!', '', 'success');
+        this.servicio.postHeroe(nuevoheroe);
+        this.servicio.home()
+
+      } else if (result.isDenied) {
+        Swal.fire('No se realizaron cambios', '', 'info')
+        this.servicio.home()
+
+      }
+    })
+
     this.servicio.home();
   }
+
+  // show(){
+  //   Swal.fire({
+  //     title: 'Error!',
+  //     text: 'Do you want to continue',
+  //     icon: 'error',
+  //     confirmButtonText: 'Cool'
+  //   })
+  // }
+
+
+
+
   ima:string="";
   subir(event:any):any{
   // console.log(event.target.files);

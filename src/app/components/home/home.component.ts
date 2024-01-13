@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
-import { blob } from 'stream/consumers';
-import { error } from 'console';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,7 +13,27 @@ export class HomeComponent {
   constructor(  private sanitizer:DomSanitizer){
   }
 
+  prueba(){
+    Swal.fire({
+      title: 'Esta seguro que desea modificar los datos del superheroe?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Guardar',
+      denyButtonText: `No guardar`,
+      customClass:{
+        container:"contenedor",
+        title:"titulo"
+      }
 
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Guardado!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('No se realizaron cambios', '', 'info')
+      }
+    })
+
+  }
 
   ima:string="";
   subir(event:any):any{

@@ -6,15 +6,17 @@ import { Observable } from 'rxjs';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FindPipe } from '../pipes/find.pipe';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-lista',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule],
+  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule],
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })
 export class ListaComponent implements OnInit {
+  p:number=1
   listado:Heroe[]=[];
   modificar:string="modificar"
   nombre:string=''

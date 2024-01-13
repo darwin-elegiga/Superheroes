@@ -5,6 +5,7 @@ import { HeroesSerService } from '../../services/heroes-ser.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Heroe } from '../../modules/Heroes.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-modificar',
@@ -51,8 +52,26 @@ get imagen(){
 
 
   eliminar(){
-    this.servicio.eliminar(this.heroe.id,this.id)
-    this.servicio.home()
+    Swal.fire({
+      title: 'Esta seguro que desea eliminar?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'SÍ',
+      denyButtonText: `NO`,
+
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Eliminado!', '', 'success');
+        this.servicio.eliminar(this.heroe.id,this.id)
+        this.servicio.home()
+
+      } else if (result.isDenied) {
+        Swal.fire('No se realizaron cambios', '', 'info')
+        this.servicio.home()
+      }
+
+    })
   }
 
   publicar(){
@@ -62,9 +81,28 @@ get imagen(){
     this.heroe.first_appearance=this.first_appearance.value;
     this.heroe.publisher=this.publisher.value;
     this.heroe.imagen=this.ima;
-    alert(this.heroe.superhero)
-    this.servicio.putHeroe(this.heroe.id,this.heroe)
-    this.servicio.home();
+    Swal.fire({
+      title: 'Esta seguro que desea modificar el heroe?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'SÍ',
+      denyButtonText: `NO`,
+
+
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Guardado!', '', 'success');
+        this.servicio.putHeroe(this.heroe.id,this.heroe)
+        this.servicio.home()
+
+      } else if (result.isDenied) {
+        Swal.fire('No se realizaron cambios', '', 'info')
+        this.servicio.home()
+      }
+      else{
+        Swal.fire('No se realizaron cambios', '', 'info')
+      }
+    })
   }
 
   constructor(private route:ActivatedRoute, private servicio:HeroesSerService, private sanitizer:DomSanitizer){}

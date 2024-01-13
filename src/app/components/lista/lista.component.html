@@ -1,9 +1,10 @@
 <input type="text" placeholder="nombre" [(ngModel)]="nombre">
-<p *ngFor="let item of listado|find:nombre,let indice=index">
-<a [routerLink]="['../modificar',indice]"> {{item.superhero}} <img class="img" [src]="item.imagen" alt=""></a>
+  <p *ngFor="let item of listado|find:nombre|paginate:{itemsPerPage:3,currentPage: p },let indice=index">
+  <a [routerLink]="['../modificar',indice+(p-1)*3]"> {{item.superhero}} <img class="img" [src]="item.imagen" alt=""></a>
 </p>
 
 
+<pagination-controls (pageChange)="p = $event" previousLabel="anterior>" nextLabel="siguiente"></pagination-controls>
 
 <!-- <span class="loader"></span> -->
 

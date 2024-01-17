@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&family=Salsa&display=swap');
 *{
   margin: 0;
   padding: 0;
 }
-main{
+.principal{
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -28,7 +29,14 @@ section h1{
   z-index: 999;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
+.no-parallax1 h1{
+
+  font-family: 'Rubik Burned', system-ui;
+  font-size: 90px;
+}
+
 .no-parallax2{
   background: linear-gradient(rgba(0, 0, 0, 0.388),rgb(0, 0, 0)),url(spiderman.jpg);
   z-index: 999;

@@ -1,0 +1,44 @@
+.principal{
+  position: absolute;
+  width: 800px;
+  height: 465px;
+  background-color: rgba(240, 248, 255, 0.811);
+  backdrop-filter: blur(10px);
+  top: 4vh;
+  left: 23vw;
+  /* top: 100px; */
+  border-radius: 30px;
+}
+.principal2{
+  position: absolute;
+  width: 800px;
+  height: 465px;
+  background-color: rgba(240, 248, 255, 0.811);
+  backdrop-filter: blur(10px);
+  top: 4vh;
+  left: -9.5vw;
+  /* top: 100px; */
+  border-radius: 30px;
+}
+.principal1{
+  position: absolute;
+  width: 470px;
+  height: 465px;
+  background-color: rgba(240, 248, 255, 0.811);
+  backdrop-filter: blur(10px);
+  top: 4vh;
+  left: -9.5vw;
+  /* top: 100px; */
+  border-radius: 30px;
+}
+.principal1_1{
+  position: absolute;
+  width: 470px;
+  height: 465px;
+  background-color: rgba(240, 248, 255, 0.811);
+  backdrop-filter: blur(10px);
+  top: 4vh;
+  left: 45vw;
+  /* top: 100px; */
+  border-radius: 30px;
+}

@@ -1,3 +1,33 @@
+
+
+.principal{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 20px;
+}
 header{
   position: fixed;
+  z-index: 100000;
+}
+
+ul{
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all ease 300ms;
+  background-color: #4b4b4b;
+
+}
+ul:hover{
+  transform: scale(1.09);
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
 }

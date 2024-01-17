@@ -7,27 +7,37 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { FindPipe } from '../pipes/find.pipe';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DetallesComponent } from '../detalles/detalles.component';
 
 @Component({
   selector: 'app-lista',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule],
+  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule, DetallesComponent],
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })
 export class ListaComponent implements OnInit {
   p:number=1
   listado:Heroe[]=[];
-  modificar:string="modificar"
-  nombre:string=''
-
+  modificar:string="modificar";
+  nombre:string='';
+  details:boolean=false;
+  indice:number=0;
+  detalleHeroe:Heroe=new Heroe();
+  position:number=0;
   get(){
     var obs$;
-    obs$=this.service.getrecetas().subscribe(data=>{this.listado=data})
+    obs$=this.service.getheroe().subscribe(data=>{this.listado=data})
   }
   ngOnInit(): void {
     this.get()
   }
+  mouseover(indice:number,posicion:number){
+    this.detalleHeroe=this.listado[indice];
+    this.position=posicion;
+    this.details=true;
+  }
+
   constructor( private service:HeroesSerService){}
 
 }

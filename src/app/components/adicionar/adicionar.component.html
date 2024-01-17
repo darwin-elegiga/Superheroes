@@ -1,4 +1,5 @@
-<form [formGroup]="addHeroe">
+<div class="principal">
+  <form [formGroup]="addHeroe">
     <input type="text" placeholder="superhero" formControlName="superhero">
     <div class="alert alert-danger" [hidden]="addHeroe.get('superhero')?.valid||addHeroe.get('superhero')?.pristine">
       <span> El campo es obligatorio </span>
@@ -12,4 +13,5 @@
 
 </form>
 
+</div>
 <!-- <button (click)="show()">show</button> -->

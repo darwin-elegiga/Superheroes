@@ -10,14 +10,14 @@ import { Router, Routes } from '@angular/router';
 export class HeroesSerService{
   arrayheroe:Heroe[]=[];
   peticion:any;
-  getrecetas():Observable<Heroe[]>{
+  getheroe():Observable<Heroe[]>{
     var obs$=this.http.get<Heroe[]>("http://localhost:3000/heroes");
     obs$.subscribe(data=>{this.arrayheroe=data})
 
     return obs$
 
   }
-  getrecetasid(id:string):Observable<Heroe>{
+  getheroeid(id:string):Observable<Heroe>{
     var x:string="http://localhost:3000/heroes/"+id;
 
     var obs$=this.http.get<Heroe>(x);

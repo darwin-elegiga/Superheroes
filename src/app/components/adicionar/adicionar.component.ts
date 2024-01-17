@@ -97,9 +97,9 @@ export class AdicionarComponent {
   this.extraer(archivocapturado).then((image:any) =>{
     this.ima=image.base
     console.log(image)
+    alert(this.ima)
 
   });
-
 }
 
 extraer=async ($event:any) => new Promise((resolve, reject) => {

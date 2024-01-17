@@ -1,12 +1,15 @@
-/* .mi-contenedor-personalizado {
-  background-color: rebeccapurple;
-  border: 2px solid #3498db;
-  color: #333;
-}
+ul{
+  border-bottom: 1px solid #5B6EFD;
+  border-left: 1px solid #5B6EFD;
+  border-right: 1px solid #5B6EFD;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all ease 300ms;
+  background-color: #fff;
 
-.mi-titulo-personalizado {
-  color: #3498db !important;
 }
-*{
-  background-color: #3498db;
-} */
+.principal{
+  /* background: linear-gradient(rgba(0, 0, 0, 0.785),rgba(0, 0, 0, 0.639)); */
+  background: black;
+  height: 100vh;
+}

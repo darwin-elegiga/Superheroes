@@ -1,1 +1,42 @@
-<p>detalles2 works!</p>
+<div class="principal">
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="heroe.imagen" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{heroe.superhero}}</h5>
+      <a [routerLink]="['/modificar',id]" class="btn btn-dark">Modificar</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Nombre</h5>
+      <p class="card-text">{{heroe.superhero}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Primera aparición</h5>
+      <p class="card-text">{{heroe.first_appearance}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Compañía creadora</h5>
+      <p class="card-text">{{heroe.publisher}}</p>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Nombre social</h5>
+      <p class="card-text">{{heroe.alter_ego}}</p>
+    </div>
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Caracteristicas</h5>
+      <p class="card-text">{{heroe.characters}}</p>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<router-outlet></router-outlet>

@@ -26,6 +26,7 @@ export class AdicionarComponent {
 
 
   });
+  nombresuperheroe:string=this.superhero.value;
   get superhero(){
     return this.addHeroe.get("superhero") as FormControl
   }
@@ -95,9 +96,7 @@ export class AdicionarComponent {
   // console.log(event.target.files);
   const archivocapturado =event.target.files[0];
   this.extraer(archivocapturado).then((image:any) =>{
-    this.ima=image.base
-    console.log(image)
-    alert(this.ima)
+    this.ima=image.base;
 
   });
 }

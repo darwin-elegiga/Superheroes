@@ -1,15 +1,17 @@
-ul{
-  border-bottom: 1px solid #5B6EFD;
-  border-left: 1px solid #5B6EFD;
-  border-right: 1px solid #5B6EFD;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  transition: all ease 300ms;
-  background-color: #fff;
+.principal{
+
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.619)),url(fx1.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
-.principal{
-  /* background: linear-gradient(rgba(0, 0, 0, 0.785),rgba(0, 0, 0, 0.639)); */
-  background: black;
-  height: 100vh;
+.caracteristicas{
+  height: 300px;
 }

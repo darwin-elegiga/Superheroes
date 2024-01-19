@@ -42,6 +42,13 @@ export class HeroesSerService{
     this.arrayheroe.splice(position,1)
   }
   putHeroe(id:string,heroe:Heroe):void{
+    // let img:string=""
+    // if(heroe.imagen!=""){
+    //   img=heroe.imagen;
+    // }
+    // else{
+    //   img=null;
+    // }
     var x:string="http://localhost:3000/heroes/"+id;
     this.http.put(x,
     {

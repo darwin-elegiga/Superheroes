@@ -6,9 +6,12 @@
         <div    class="heroe" *ngFor="let item of listado|find:nombre|paginate:{itemsPerPage:3,currentPage: p },let indice=index">
             <a [routerLink]="['../modificar',indice+(p-1)*3]" (mouseover)="mouseover(indice+(p-1)*3,indice)" (mouseout)="details=false">
               <img class="img" [src]="item.imagen" alt="">
-              <h3 class="text">  {{item.superhero}}   </h3>
+              <h3 *ngIf="details==false" class="text">  {{item.superhero}}   </h3>
+              <h2 *ngIf="details" class="text" >Click para modificar</h2>
             </a>
-      </div>
+        </div>
+
+
     </div>
 
     <app-detalles *ngIf="details"  [heroe]='detalleHeroe' [indice]="position"></app-detalles>

@@ -74,13 +74,18 @@ get imagen(){
     })
   }
 
-  publicar(){
+  modificar(){
     this.heroe.superhero=this.superhero.value;
     this.heroe.alter_ego=this.alter_ego.value;
     this.heroe.characters=this.characters.value;
     this.heroe.first_appearance=this.first_appearance.value;
     this.heroe.publisher=this.publisher.value;
-    this.heroe.imagen=this.ima;
+    if(this.ima!=''){
+       this.heroe.imagen=this.ima;
+    }
+    else{
+      this.heroe.imagen=this.imagen.value;
+    }
     Swal.fire({
       title: 'Esta seguro que desea modificar el heroe?',
       showDenyButton: true,
@@ -128,6 +133,7 @@ get imagen(){
     this.extraer(archivocapturado).then((image:any) =>{
       this.ima=image.base
       console.log(image)
+      this.heroe.imagen=image.base;
 
     });
 

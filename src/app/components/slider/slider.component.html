@@ -7,15 +7,24 @@
     <swiper-container class="container" loop navigation="true" effect="material" parallax="true" autoplay   grab-cursor="true" centered-slide="true" slide-per-view="auto">
       <swiper-slide class="swiper_slide" *ngFor="let item of listado, let ind=index"  >
 
-        <div class="carrusel_container" style="background-image:linear-gradient(rgba(0, 0, 0, 0.231),rgba(0, 0, 0, 0.486)), url({{item.imagen}})">
-          <h2 class="carrusel_titulo">{{item.superhero}}</h2>
-          <!-- <img class="carrusel_img" [src]="item.imagen" alt="img {{item.superhero}}"> -->
-        </div>
+        <a [routerLink]="['../detalles2',ind]">
+          <!-- style="background-image:linear-gradient(rgba(0, 0, 0, 0.231),rgba(0, 0, 0, 0.486)), url({{item.imagen}})" -->
+            <div class="carrusel_container">
+
+              <h2 class="carrusel_titulo">{{item.superhero}}</h2>
+              <img class="carrusel_img" [src]="item.imagen" alt="img {{item.superhero}}">
+            </div>
+        </a>
       </swiper-slide>
 
     <div class="swiper_button-prev"></div>
     </swiper-container>
 
   </div>
+  <a class="a_listado" routerLink="/lista">
+    <h2>Ver el listado de todos los heroes</h2>
+  </a>
+<!-- <ngx-spinner></ngx-spinner> -->
 
 </div>
+

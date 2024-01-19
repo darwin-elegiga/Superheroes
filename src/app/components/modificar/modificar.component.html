@@ -1,21 +1,58 @@
 <div class="principal">
 
 
-<form [formGroup]="modHeroe">
-  <input type="text" placeholder="superhero" formControlName="superhero">
-  <div class="alert alert-danger" [hidden]="modHeroe.get('superhero')?.valid||modHeroe.get('superhero')?.pristine">
-    <span> El campo es obligatorio </span>
+  <div class="cuerpo">
+    <form class="formulario" [formGroup]="modHeroe">
+
+      <div class="card"  style="width: 18rem;">
+        <img class="card-img-top" [src]="heroe.imagen" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{heroe.superhero}}</h5>
+          <input type="file" (change)="subir($event)">
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5  class="card-title">Nombre</h5>
+            <input class="form-control" type="text" placeholder="Superhero" formControlName="superhero">
+            <div class="alert alert-danger" [hidden]="modHeroe.get('superhero')?.valid||modHeroe.get('superhero')?.pristine">
+              <span> El campo es obligatorio </span>
+            </div>
+          </div>
+
+
+          <div class="card-body">
+            <h5 class="card-title">Compañía creadora</h5>
+            <input class="form-control" type="text" placeholder="publisher" formControlName="publisher">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Nombre social</h5>
+            <input class="form-control" type="text" placeholder="alter_ego" formControlName="alter_ego">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Primera aparición</h5>
+            <input class="form-control" type="text" placeholder="first_appearance" formControlName="first_appearance">
+          </div>
+
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Características</h2>
+          <textarea class="form-control caracteristicas" type="text" placeholder="characters" formControlName="characters"></textarea>
+        </div>
+      </div>
+
+
+
+
+  </form>
+    <button class="btn btn-dark" (click)="modificar()">MODIFICAR</button>
+    <button class="btn btn-dark" (click)="eliminar()">ELIMINAR</button>
   </div>
-  <input type="text" placeholder="publisher" formControlName="publisher">
-  <input type="text" placeholder="alter_ego" formControlName="alter_ego">
-  <input type="text" placeholder="first_appearance" formControlName="first_appearance">
-  <input type="text" placeholder="characters" formControlName="characters">
-  <input type="file" (change)="subir($event)">
-
-  <button  (click)="publicar()">PUBLICAR</button>
-
-</form>
-
-<button (click)="eliminar()">eliminar</button>
-
 </div>
+
+

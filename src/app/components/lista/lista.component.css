@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 .principal{
-  /* background: linear-gradient(rgba(0, 0, 0, 0.785),rgba(0, 0, 0, 0.639)); */
-  background: black;
+
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.619)),url(fx1.jpg);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -38,6 +38,7 @@
   transform: translateZ(1px) ;
   box-shadow: 0px 0px 12px .1px rgb(255, 253, 253);
   transition: all ease 300ms;
+  height: max-content;
 
 }
 .heroe:hover{
@@ -80,4 +81,13 @@
   width: 500px;
   z-index: 10000;
   bottom: 0;
+}
+.clic_visible{
+  position: absolute;
+  top: 230px;
+  background-color: rebeccapurple;
+}
+.heroes_container{
+  display: flex;
+  flex-direction: row;
 }

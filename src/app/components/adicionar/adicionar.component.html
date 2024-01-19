@@ -1,4 +1,4 @@
-<div class="principal">
+<!--
   <form [formGroup]="addHeroe">
     <input type="text" placeholder="superhero" formControlName="superhero">
     <div class="alert alert-danger" [hidden]="addHeroe.get('superhero')?.valid||addHeroe.get('superhero')?.pristine">
@@ -8,10 +8,70 @@
     <input type="text" placeholder="alter_ego" formControlName="alter_ego">
     <input type="text" placeholder="first_appearance" formControlName="first_appearance">
     <input type="text" placeholder="characters" formControlName="characters">
-    <input type="file" (change)="subir($event)">
     <button [disabled]="addHeroe.invalid" class="btn btn-primary" (click)="publicar()">subir</button>
 
-</form>
+</form> -->
 
+
+<div class="principal">
+
+
+  <div class="cuerpo">
+    <form class="formulario" [formGroup]="addHeroe">
+
+      <!-- <div class="card"  style="width: 18rem;">
+        <img class="card-img-top" [src]=".imagen" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{nombresuperheroe}}</h5>
+          <input type="file" (change)="subir($event)">
+        </div>
+      </div> -->
+      <div class="card"  style="width: 18rem;">
+        <img class="card-img-top" [src]="ima" alt="Agregue imagen">
+        <div class="card-body">
+          <h5 class="card-title">Agregar imagen</h5>
+          <input type="file" (change)="subir($event)">
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5  class="card-title">Nombre</h5>
+            <input class="form-control" type="text" placeholder="Superhero" formControlName="superhero">
+            <div class="alert alert-danger" [hidden]="addHeroe.get('superhero')?.valid||addHeroe.get('superhero')?.pristine">
+              <span> El campo es obligatorio </span>
+            </div>
+          </div>
+
+
+          <div class="card-body">
+            <h5 class="card-title">Compañía creadora</h5>
+            <input class="form-control" type="text" placeholder="publisher" formControlName="publisher">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Nombre social</h5>
+            <input class="form-control" type="text" placeholder="alter_ego" formControlName="alter_ego">
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Primera aparición</h5>
+            <input class="form-control" type="text" placeholder="first_appearance" formControlName="first_appearance">
+          </div>
+
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Características</h2>
+          <textarea class="form-control caracteristicas" type="text" placeholder="characters" formControlName="characters"></textarea>
+        </div>
+      </div>
+
+
+
+
+  </form>
+    <button class="btn btn-dark" (click)="publicar()">PUBLICAR</button>
+  </div>
 </div>
 <!-- <button (click)="show()">show</button> -->

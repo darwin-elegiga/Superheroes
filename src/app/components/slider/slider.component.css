@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 
+  @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 .principal{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.619)),url(fx1.jpg);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -25,10 +28,9 @@
 .carrusel_container{
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.913));
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -45,4 +47,20 @@
   padding: 4px;
   border-radius: 10px;
   top: 420px;
+}
+.a_listado h2{
+  color: #fff;
+  font-family: 'Moirai One', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+
+}
+.a_listado{
+  margin-top: 20px;
+  font-family: 'Moirai One', Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.carrusel_img{
+  /* object-fit: cover; */
+  width: 100%;
+  border-radius: 30px;
 }

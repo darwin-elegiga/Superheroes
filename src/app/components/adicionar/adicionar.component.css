@@ -1,5 +1,17 @@
 .principal{
-  /* background: linear-gradient(rgba(0, 0, 0, 0.785),rgba(0, 0, 0, 0.639)); */
-  background: black;
+
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.619)),url(fx1.jpg);
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.caracteristicas{
+  height: 300px;
 }

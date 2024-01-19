@@ -67,16 +67,16 @@ export class AdicionarComponent {
       if (result.isConfirmed) {
         Swal.fire('Agregado!', '', 'success');
         this.servicio.postHeroe(nuevoheroe);
-        this.servicio.home()
+        this.servicio.slider()
 
       } else if (result.isDenied) {
         Swal.fire('No se realizaron cambios', '', 'info')
-        this.servicio.home()
+        this.servicio.slider()
 
       }
     })
 
-    this.servicio.home();
+    this.servicio.slider();
   }
 
   // show(){

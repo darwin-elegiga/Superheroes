@@ -42,13 +42,7 @@ export class HeroesSerService{
     this.arrayheroe.splice(position,1)
   }
   putHeroe(id:string,heroe:Heroe):void{
-    // let img:string=""
-    // if(heroe.imagen!=""){
-    //   img=heroe.imagen;
-    // }
-    // else{
-    //   img=null;
-    // }
+
     var x:string="http://localhost:3000/heroes/"+id;
     this.http.put(x,
     {
@@ -69,6 +63,12 @@ export class HeroesSerService{
 
   home(){
     this.router.navigate([''])
+  }
+  slider(){
+    this.router.navigate(['slider'])
+  }
+  lista(){
+    this.router.navigate(['lista'])
   }
   constructor(private http:HttpClient,private router:Router  ) { }
 

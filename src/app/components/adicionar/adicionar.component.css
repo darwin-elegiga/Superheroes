@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .formulario{
   display: flex;
@@ -14,4 +15,13 @@
 }
 .caracteristicas{
   height: 300px;
+}
+.btn{
+  margin: 10px;
+  background-color: whitesmoke;
+}
+.btn:hover{
+  background-color: #212529;
+  color: whitesmoke;
+
 }

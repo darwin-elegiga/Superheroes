@@ -98,11 +98,11 @@ get imagen(){
       if (result.isConfirmed) {
         Swal.fire('Guardado!', '', 'success');
         this.servicio.putHeroe(this.heroe.id,this.heroe)
-        this.servicio.home()
+        this.servicio.lista()
 
       } else if (result.isDenied) {
         Swal.fire('No se realizaron cambios', '', 'info')
-        this.servicio.home()
+        this.servicio.lista()
       }
       else{
         Swal.fire('No se realizaron cambios', '', 'info')

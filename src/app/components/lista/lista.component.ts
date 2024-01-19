@@ -8,11 +8,12 @@ import { FindPipe } from '../pipes/find.pipe';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DetallesComponent } from '../detalles/detalles.component';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-lista',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule, DetallesComponent],
+  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule, DetallesComponent, NgxUiLoaderModule],
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })

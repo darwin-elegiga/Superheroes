@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroesSerService } from '../../services/heroes-ser.service';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detalles2',
@@ -12,11 +13,15 @@ import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './detalles2.component.css'
 })
 export class Detalles2Component implements OnInit {
-  id:number=0;
-  heroe:Heroe=new Heroe()
+  id:string="";
+  heroe:Heroe=new Heroe();
+  get(){
+    var obs$;
+    obs$=this.servicio.getheroeid(this.id).subscribe(data=>{this.heroe=data});
+  }
   ngOnInit(): void {
     this.id=this.route.snapshot.params['id'];
-    this.heroe= this.servicio.arrayheroe[this.id]
+    this.get()
   }
   constructor(private servicio:HeroesSerService,private route:ActivatedRoute){}
 

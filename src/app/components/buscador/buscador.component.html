@@ -3,7 +3,7 @@
 <input class="buscador" type="text" placeholder="nombre" [(ngModel)]="nombre">
 <div class="buscador_div" *ngIf="nombre!=''">
   <div   class="heroe" *ngFor="let item of listado|find:nombre,let indice=index">
-    <a class="a_heroe" [routerLink]="['../detalles2',indice]" >
+    <a class="a_heroe" [routerLink]="['../detalles2',item.id]" >
 
       <h3  class="text">  {{indice}} - {{item.superhero}}   </h3>
       <img class="img" [src]="item.imagen" alt="">

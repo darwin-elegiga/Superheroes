@@ -9,11 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DetallesComponent } from '../detalles/detalles.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { BuscadorComponent } from '../buscador/buscador.component';
 
 @Component({
   selector: 'app-lista',
   standalone: true,
-  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule, DetallesComponent, NgxUiLoaderModule],
+  imports: [CommonModule,RouterLink,RouterOutlet,FindPipe,FormsModule,NgxPaginationModule, DetallesComponent, BuscadorComponent,NgxUiLoaderModule],
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })
@@ -23,6 +24,7 @@ export class ListaComponent implements OnInit {
   modificar:string="modificar";
   nombre:string='';
   details:boolean=false;
+  buscator:boolean=false;
   indice:number=0;
   detalleHeroe:Heroe=new Heroe();
   position:number=0;
@@ -39,6 +41,7 @@ export class ListaComponent implements OnInit {
     this.details=true;
   }
 
+  receptora(evento:boolean){this.buscator=evento}
   constructor( private service:HeroesSerService){}
 
 }

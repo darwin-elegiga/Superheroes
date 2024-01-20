@@ -1,0 +1,67 @@
+.principal{
+  position: absolute;
+  width: 465px;
+  height: 635px;
+  background-color: rgba(255, 255, 255, 0.363);
+  backdrop-filter: blur(10px);
+  top: -2vh;
+  left: 18vw;
+  /* top: 100px; */
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.heroe{
+  margin: 10px;
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+  width: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  overflow: hidden;
+  transform: translateZ(1px) ;
+  transition: all ease 300ms;
+  height: max-content;
+
+
+}
+.heroe:hover{
+  transform: scale(1.03);
+  box-shadow: 0px 0px 12px .1px rgb(255, 253, 253);
+
+}
+.img{
+  width: 40px;
+  border-radius: 50%;
+}
+.text{
+  font-size: 25px;
+}
+.a_heroe{
+  display: flex;
+}
+.close{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.buscador{
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+.buscador_div{
+  position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 500px;
+  top: 40px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
